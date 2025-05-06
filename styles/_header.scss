@@ -1,0 +1,12 @@
+#header {
+    background-color: var(--black);
+
+    @media (992px <= width) {
+        padding: 16px 0 !important;
+        font-size: 0.875rem;
+
+        .nav-link {
+            padding: 0 12px !important;
+        }
+    }
+}

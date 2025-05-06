@@ -1,16 +1,10 @@
+@import 
+'./styles/variables',
+'./styles/header',
+'./styles/banner';
+
+/* BASE */
 body {
     font-family: Arial, system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-}
-
-header {
-    background-color: #111111;
-    
-    @media (992px <= width) {
-        padding: 16px 0 !important;
-        font-size: 0.875rem;
-
-        .nav-link {
-            padding: 0 12px !important;
-        }
-    }
+    line-height: 1.5em;
 }

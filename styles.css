@@ -1,16 +1,164 @@
-body {
-  font-family: Arial, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+:root {
+  --white: #ffffff;
+  --black: #111111;
+  --grey: #2c2c2c;
 }
 
-header {
-  background-color: #111111;
+#header {
+  background-color: var(--black);
 }
 @media (992px <= width) {
-  header {
+  #header {
     padding: 16px 0 !important;
     font-size: 0.875rem;
   }
-  header .nav-link {
+  #header .nav-link {
     padding: 0 12px !important;
   }
+}
+
+.banner {
+  position: relative;
+  background-image: url("../public/bg-network-1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+  overflow: hidden;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 75% 0%, #707fb8 0%, rgba(22, 26, 38, 0) 100%);
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.banner .container {
+  padding: 32px 16px 16px;
+}
+.banner__herotext {
+  position: relative;
+  z-index: 1;
+}
+.banner__herotext h1 {
+  margin-bottom: 16px;
+  font-size: 2rem;
+  font-weight: 200;
+  text-align: center;
+}
+.banner__herotext h1 span {
+  margin-top: 8px;
+  display: block;
+  font-size: 1.5rem;
+}
+.banner__herotext ul {
+  font-size: 0.875rem;
+}
+.banner__herotext .herotext__apps {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.banner__herotext .herotext__apps a {
+  display: block;
+}
+.banner__herotext .herotext__apps a img {
+  border: 1px solid var(--grey);
+  border-radius: 4px;
+}
+.banner__heroimages {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: 380px;
+  max-width: 680px;
+}
+.banner__heroimages img {
+  position: absolute;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+  top: 65%;
+  transform: translateY(-35%);
+  min-height: 350px;
+}
+.banner__heroimages img:not(.heroimages__3) {
+  width: 50%;
+  max-width: 150px;
+  height: 75%;
+}
+.banner__heroimages img.heroimages__1 {
+  left: 0;
+  z-index: 1;
+  transform: translateY(-35%) skew(0deg, 15deg);
+}
+.banner__heroimages img.heroimages__2 {
+  left: 12.5%;
+  z-index: 2;
+  transform: translateY(-35%) skew(0deg, 15deg);
+}
+.banner__heroimages img.heroimages__3 {
+  width: 100%;
+  min-width: 360px;
+  max-width: 400px;
+  height: 100%;
+  min-height: 440px;
+  z-index: 3;
+  left: 50%;
+  transform: translateX(-50%) translateY(-35%);
+}
+.banner__heroimages img.heroimages__4 {
+  right: 12.5%;
+  z-index: 2;
+  transform: translateY(-35%) skew(0deg, -15deg);
+}
+.banner__heroimages img.heroimages__5 {
+  right: 0;
+  z-index: 1;
+  transform: translateY(-35%) skew(0deg, -15deg);
+}
+
+@media (768px <= width) {
+  .banner__herotext h1 {
+    font-size: 3rem;
+    text-align: left;
+  }
+  .banner__herotext h1 span {
+    font-size: 2rem;
+  }
+  .banner__herotext ul {
+    font-size: 1rem;
+  }
+  .banner__herotext .herotext__apps {
+    display: flex;
+    justify-content: left;
+  }
+  .banner__herotext .herotext__apps a img {
+    width: 160px;
+  }
+}
+@media (992px <= width) {
+  .banner .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .banner__herotext {
+    flex-grow: 1;
+  }
+  .banner__heroimages {
+    width: 50%;
+    max-width: 680px;
+    height: 260px;
+  }
+}
+/* BASE */
+body {
+  font-family: Arial, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 1.5em;
 }/*# sourceMappingURL=styles.css.map */
