@@ -1,0 +1,93 @@
+.value {
+    background-color: var(--grey-light);
+    text-align: center;
+    
+    .container {
+        padding: 64px 16px;
+
+        h2 {
+            margin-bottom: 32px;
+            color: var(--black);
+            font-weight: 600;
+        }
+
+        .value__content {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            
+            .content__bullet {
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+                max-width: 160px;
+                
+                p {
+                    margin: 0;
+                }
+            }
+            .content__main {
+                margin: auto;
+                filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.5));
+            }
+        }
+    }
+
+    @media(768px <= width) {
+        .container {
+            .value__content {
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                .content__left, .content__right {
+                    flex: 1 1 45%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    justify-content: space-between;
+                }
+                .content__main {
+                    margin: auto;
+                    flex: 1 0 100%;
+                    max-width: 380px;
+                }
+            }
+        }
+    }
+    @media(992px <= width) {
+        .container {
+            .value__content {
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: center;
+
+                .content__left {
+                    order: 1;
+                    flex-basis: 25%;
+                    
+                    .content__bullet {
+                        margin-right: 0;
+                        align-items: flex-end;
+                        text-align: right;
+                    }
+                }
+                .content__right {
+                    order: 3;
+                    flex-basis: 25%;
+                    .content__bullet {
+                        margin-left: 0;
+                        align-items: flex-start;
+                        text-align: left;
+                    }
+                }
+                .content__main {
+                    order: 2;
+                    flex-basis: 50%;
+                }
+            }
+        }
+    }
+}
