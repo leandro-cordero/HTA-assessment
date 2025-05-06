@@ -21,8 +21,8 @@
                 <ul class="navbar-nav text-white flex-lg-row">
                     <li class="nav-item">
                         <a class="nav-link text-white fw-bold active" aria-current="page" href="#">
-                            <i class="d-none d-lg-block fa-solid fa-house-chimney"></i>
                             <span class="d-lg-none">HOME</span>
+                            <i class="d-none d-lg-block fa-solid fa-house-chimney fs-6"></i>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -82,18 +82,18 @@
         </div>
 
         <!-- Form -->
-        <form id="form">
-            <div class="mb-3">
+        <form id="form" class="container" novalidate>
+            <div>
                 <input type="text" id="first-name-input" name="first-name" class="form-control" placeholder="First Name" aria-label="First Name">
             </div>
-            <div class="mb-3">
+            <div>
                 <input type="text" id="last-name-input" name="last-name" class="form-control" placeholder="Last Name" aria-label="Last Name">
             </div>
-            <div class="mb-3">
-                <input type="text" id="email-input" name="email" class="form-control" placeholder="Email" aria-label="Email">
-                <small id="email-error"></small>
+            <div>
+                <input type="text" id="email-input" name="email" class="form-control" placeholder="Email" aria-label="Email" required>
+                <small id="email-error" class="text-error"></small>
             </div>
-            <div class="mb-3">
+            <div>
                 <select name="country" id="country" class="form-select" aria-label="Country of Residence">
                     <option value="">Country of Residence</option>
                     <option value="Mexico">Mexico</option>
@@ -102,17 +102,17 @@
                 </select>
             </div>
 
-            <div class="mb-3">
-                <select name="prefix" id="prefix" class="form-select" aria-label="Telephone Prefix">
+            <div class="d-flex gap-2">
+                <select name="prefix" id="prefix" class="form-select flex-shrink-1 w-auto" aria-label="Telephone Prefix">
                     <option value="">Prefix</option>
                     <option value="52">+52</option>
                     <option value="1">+1</option>
                     <option value="51">+51</option>
                 </select>
-                <input type="tel" name="telephone" id="telephone" class="form-control" placeholder="Phone Number" aria-label="Telephone">
+                <input type="tel" name="telephone" id="telephone" class="form-control flex-grow-1" placeholder="Phone Number" aria-label="Telephone">
             </div>
 
-            <div class="mb-3">
+            <div>
                 <select name="currency" id="currency" class="form-select" aria-label="currency">
                     <option value="mxn">MXN</option>
                     <option value="usd">USD</option>
@@ -120,8 +120,13 @@
                 </select>
             </div>
 
-
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="mt-2 d-flex flex-column gap-4 mt-lg-0 justify-content-lg-between gap-lg-2">
+                <div class="d-flex align-items-center gap-2 align-items-lg-start">
+                    <input type="checkbox" id="terms" name="terms" class="form-check-input" aria-label="Terms and Conditions">
+                    <label for="terms" class="form-check-label">I have read and accepted the privacy policy Trading Forex &amp; CFDs is risky</label>
+                </div>
+                <button type="submit" class="btn btn-danger">Submit</button>
+            </div>
         </form>
     </main>
 

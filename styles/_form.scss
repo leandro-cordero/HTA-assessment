@@ -1,0 +1,42 @@
+#form {
+    padding: 64px 16px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    column-gap: 16px;
+    row-gap: 12px;
+
+    select, input[type="text"], input[type="email"], input[type="tel"] {
+        padding: 8px 16px;
+        border-radius: 0;
+        height: 44px;
+        max-height: 44px;
+        font-size: 0.875rem;
+        color: var(--grey);
+        
+        &::placeholder {
+            color: var(--grey);
+        }
+    }
+    label[for="terms"] {
+        font-size: 0.75rem;
+        line-height: 1.2em;
+        color: var(--grey);
+    }
+
+    .text-error {
+        font-size: 0.75rem;
+        line-height: 1.2em;
+        color: var(--bs-danger);
+    }
+
+
+    @media (992px <= width) {
+        grid-template-columns: repeat(4, 1fr);
+
+        div:last-child {
+            grid-column: 4 / 5;
+            grid-row: 1 / 3;
+        }
+    }
+}
