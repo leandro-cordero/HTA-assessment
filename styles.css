@@ -23,7 +23,7 @@
 
 .banner {
   position: relative;
-  background-image: url("../public/bg-network-1.jpg");
+  background-image: url("https://raw.githubusercontent.com/leandro-cordero/HTA-assessment/refs/heads/master/public/bg-network-1.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
