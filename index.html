@@ -8,8 +8,44 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <header>
-        <img src="./public/logo-HotForex.png" alt="HotForex">
+    <header id="header" class="navbar navbar-dark">
+        <nav class="container flex-lg-nowrap navbar-expand-lg align-items-lg-end">
+            <a href="/" class="navbar-brand">
+                <img src="./public/logo-HotForex.png" alt="HotForex" width="200">
+            </a>
+
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation menu">
+                <i class="fa-solid fa-bars text-white"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav text-white flex-lg-row">
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold active" aria-current="page" href="#">
+                            <i class="d-none d-lg-block fa-solid fa-house-chimney"></i>
+                            <span class="d-lg-none">HOME</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="#">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="#">PRODUCTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="#">ACCOUNTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="#">PLATFORMS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="#">TOOLS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="#">EDUCATION</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
     <main>
