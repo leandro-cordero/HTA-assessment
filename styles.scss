@@ -3,10 +3,23 @@
 './styles/header',
 './styles/banner',
 './styles/form',
-'./styles/valueprop';
+'./styles/valueprop',
+'./styles/about';
 
 /* BASE */
 body {
     font-family: Arial, system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     line-height: 1.5em;
+
+    .text-red {
+        color: var(--red);
+    }
+    .btn-danger {
+        background-color: var(--red);
+        border-color: var(--red);
+        border-radius: 0;
+    }
+    p {
+        margin: 0;
+    }
 }
